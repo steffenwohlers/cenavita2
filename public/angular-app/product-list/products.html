@@ -1,0 +1,9 @@
+<h1>{{vm.title}}</h1>
+<h4>Gib hier die GTIN ein:</h4>
+<input type="text" ng-model="search">
+<a href="#!/product/{{ search }}" class="badge badge-primary">Zum Artikel</a>
+<hr>
+<h4>Alle Artikel in der internen Datenbank:</h4>
+<ul>
+    <li ng-repeat="product in vm.products"><a href="#!/product/{{ product._id }}">{{product.name}}</a></li>
+</ul>

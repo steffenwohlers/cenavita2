@@ -1,0 +1,56 @@
+// Initial internal data
+[
+    {
+        "_id" : "12345",
+        "manufacturer" : "McDonald's",
+        "name" : "Chickenwings",
+        "vegetarian" : false,
+        "vegan" : false,
+        "glutenfree" : true
+    },
+    {
+        "_id" : "12346",
+        "manufacturer" : "Junge",
+        "name" : "Bread",
+        "vegetarian" : true,
+        "vegan" : true,
+        "glutenfree" : false
+    },
+    {
+        "_id" : "12347",
+        "manufacturer" : "BurgerKing",
+        "name" : "BigNothing",
+        "vegetarian" : true,
+        "vegan" : true,
+        "glutenfree" : true
+    }
+]
+
+// Initial external Data
+
+[
+    {
+        "_id" : "77777",
+        "manufacturer" : "Mars",
+        "name" : "Snickers",
+        "vegetarian" : true,
+        "vegan" : false,
+        "glutenfree" : true
+    },
+    {
+        "_id" : "88888",
+        "manufacturer" : "Nestle",
+        "name" : "Nutella",
+        "vegetarian" : true,
+        "vegan" : true,
+        "glutenfree" : false
+    },
+    {
+        "_id" : "99999",
+        "manufacturer" : "Pizza Hut",
+        "name" : "Vegetarian Pizza",
+        "vegetarian" : true,
+        "vegan" : false,
+        "glutenfree" : false
+    }
+]
