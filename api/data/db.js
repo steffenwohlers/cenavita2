@@ -1,5 +1,7 @@
 var mongoose = require('mongoose');
-var dburl = 'mongodb://localhost:27017/cenavita';
+
+var dburl = 'mongodb://cenavita:Loos123!@ds042687.mlab.com:42687/cenavita';
+//var dburl = 'mongodb://localhost:27017/cenavita';
 var retry = null;
 mongoose.connect(dburl);
 
