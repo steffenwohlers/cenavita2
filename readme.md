@@ -1,4 +1,4 @@
-# MEAN stack app
+# MEAN stack app für das cenavita Projekt
 
 This repo contains the MEAN stack application that is built through  Full Stack Training's MEAN Stack course.
 
