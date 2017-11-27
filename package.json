@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/fullstacktraining/mean-stack-hero#readme",
   "dependencies": {
-    "angular": "^1.0.0",
+    "angular": "^1.6.7",
+    "angular-route": "^1.6.7",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "mongodb": "^2.1.7",
