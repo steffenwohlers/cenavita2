@@ -1,3 +1,6 @@
+/**
+ * Logik für die Produktsuche in der externen DB
+ */
 var http = require('http');
 var mongoose = require('mongoose');
 var Product = mongoose.model('Product');
@@ -5,9 +8,11 @@ var extServer = require('../externalServers/externalServer');
 var extServerOptions = extServer.extServerOptions;
 var fixedExtServerOptionsPath = extServer.extServerOptions.path;
 
+//die ausgeführte Funktion
 module.exports.extProdcutsGetOne = function (res, productId) {
     console.log("Searching for following ID in external DB. ID:", productId);
     
+    //Objekt, welches als Response an das Frontend gesendet wird
     var result = {
         status : 500,
         message : {"message" : "Init"}
