@@ -1,5 +1,5 @@
 {
-  "name": "mean-app",
+  "name": "cenavita2",
   "version": "1.0.0",
   "description": "MEAN stack application",
   "main": "app-be.js",
@@ -9,17 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fullstacktraining/mean-stack-hero.git"
+    "url": ""
   },
   "keywords": [
     "mean"
   ],
-  "author": "Full Stack Training",
+  "author": "Steffen Wohlers",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fullstacktraining/mean-stack-hero/issues"
-  },
-  "homepage": "https://github.com/fullstacktraining/mean-stack-hero#readme",
   "dependencies": {
     "angular": "^1.6.7",
     "angular-route": "^1.6.7",

@@ -1,4 +1,5 @@
 //ALTER GET Controller
+
 // module.exports.productsGetOne = function(req, res) {
 //   var id = req.params.productId;
 //   console.log('GET the Product: ', id);

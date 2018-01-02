@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 
+// Gibt das Schema für die Produkte vor
 var productSchema = new mongoose.Schema({
     _id : {
         type: String,

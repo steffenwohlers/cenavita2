@@ -1,14 +1,15 @@
 var mongoose = require('mongoose');
 
+// Die URL zu unserer DB
 var dburl = 'mongodb://cenavita:Loos123!@ds042687.mlab.com:42687/cenavita';
-//var dburl = 'mongodb://localhost:27017/cenavita';
 var retry = null;
 mongoose.connect(dburl);
 
-// CONNECTION EVENTS
+// Gibt auf der Konsole den status der Verbindung aus
 mongoose.connection.on('connected', function() {
   console.log('Mongoose connected to ' + dburl);
 });
+// Gibt auf der Konsole den status der Verbindung aus
 mongoose.connection.on('error', function(err) {
   console.log('Mongoose connection error: ' + err);
 });
@@ -16,8 +17,7 @@ mongoose.connection.on('disconnected', function() {
   console.log('Mongoose disconnected');
 });
 
-// CAPTURE APP TERMINATION / RESTART EVENTS
-// To be called when process is restarted or terminated
+// Wird ausgeführt wenn Vebridnung beendet oder restarted wird.
 function gracefulShutdown(msg, callback) {
   mongoose.connection.close(function() {
     console.log('Mongoose disconnected through ' + msg);
@@ -25,25 +25,26 @@ function gracefulShutdown(msg, callback) {
   });
 }
 
-// For nodemon restarts
+// restart
 process.once('SIGUSR2', function() {
   gracefulShutdown('nodemon restart', function() {
     process.kill(process.pid, 'SIGUSR2');
   });
 });
-// For app termination
+
+// Vebridung trennen
 process.on('SIGINT', function() {
   gracefulShutdown('App termination (SIGINT)', function() {
     process.exit(0);
   });
 });
-// For Heroku app termination
+
+
 process.on('SIGTERM', function() {
   gracefulShutdown('App termination (SIGTERM)', function() {
     process.exit(0);
   });
 });
 
-
-// BRING IN YOUR SCHEMAS & MODELS
+//Laden der models
 require('./products.model');
